@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/server.json",
+  "name": "io.github.send21io/mcp",
+  "description": "Non-custodial payment drafts and pay links for BTC, USDC, USDT, and EURC. Remote Streamable HTTP MCP — send21 never holds keys or funds.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/send21io/mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://send21.io",
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://send21.io/mcp",
+      "transport": {
+        "type": "streamable-http",
+        "url": "https://send21.io/mcp"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://send21.io/mcp"
+    }
+  ]
+}

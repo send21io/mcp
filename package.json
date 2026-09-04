@@ -1,0 +1,16 @@
+{
+  "name": "@send21io/mcp",
+  "version": "1.0.0",
+  "description": "Remote MCP connector metadata for send21 non-custodial payment drafts (https://send21.io/mcp)",
+  "license": "MIT",
+  "homepage": "https://send21.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/send21io/mcp.git"
+  },
+  "keywords": ["mcp", "send21", "payments", "bitcoin", "non-custodial"],
+  "files": ["README.md", "mcp.json", "server.json", "glama.json", "LICENSE"],
+  "engines": {
+    "node": ">=18"
+  }
+}
