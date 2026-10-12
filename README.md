@@ -1,3 +1,5 @@
+<p align="center"><img src="https://raw.githubusercontent.com/send21io/send21io/main/assets/social-1280x640.png" alt="send21" width="640"></p>
+
 # send21 MCP
 
 Remote [Model Context Protocol](https://modelcontextprotocol.io/) server for **send21** — non-custodial payment drafts and pay links.
