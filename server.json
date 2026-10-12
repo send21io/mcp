@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.send21io/mcp",
-  "description": "Non-custodial pay links: BTC + Lightning, USDC, USDT, EURC, SOL, ETH. Payer signs; never holds keys.",
+  "description": "Non-custodial pay links and drafts, each with a published SHA-256 hash. A human signs every payment.",
   "title": "send21",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "repository": {
     "url": "https://github.com/send21io/mcp",
     "source": "github"
