@@ -2,13 +2,13 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.send21io/mcp",
   "title": "send21",
-  "description": "Non-custodial payment links and drafts for BTC, Lightning, USDC, USDT, EURC, SOL and ETH.",
+  "description": "Non-custodial pay links for BTC, Lightning, USDC, USDT, EURC, SOL, ETH. Agent keys cannot spend.",
   "repository": {
     "url": "https://github.com/send21io/mcp",
     "source": "github"
   },
   "websiteUrl": "https://send21.io/docs/mcp",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "remotes": [
     {
       "type": "streamable-http",
