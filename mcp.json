@@ -1,6 +1,6 @@
 {
   "name": "send21",
-  "description": "Non-custodial crypto payment drafts and checkout pay links for BTC, USDC, USDT, and EURC. Tools for creating drafts, payment requests, transaction templates, rates, and fees. send21 never holds keys or funds.",
+  "description": "Crypto pay links and API for people and AI agents. Tools for creating drafts, payment requests, transaction templates, rates, and fees. send21 never holds keys or funds.",
   "endpoint": "https://send21.io/mcp",
   "transport": "streamable-http",
   "authentication": {
