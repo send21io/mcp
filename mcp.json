@@ -1,6 +1,6 @@
 {
   "name": "send21",
-  "description": "Crypto pay links and API for people and AI agents. Tools for creating drafts, payment requests, transaction templates, rates, and fees. send21 never holds keys or funds.",
+  "description": "Crypto pay links and API for people and AI agents. Tools for creating drafts, payment requests, transaction templates, rates, and fees. Agents onboard themselves; humans approve where the money lands. send21 never holds keys or funds.",
   "endpoint": "https://send21.io/mcp",
   "transport": "streamable-http",
   "authentication": {
@@ -9,5 +9,5 @@
   },
   "documentation": "https://send21.io/llms.txt",
   "openapi": "https://send21.io/swagger/v1/swagger.json",
-  "contact": "integration@send21.io"
+  "contact": "info@send21.io"
 }

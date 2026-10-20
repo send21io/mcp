@@ -36,12 +36,14 @@ Point an MCP client at the remote server:
 
 ## What the tools do
 
-Typical tools (see live `tools/list`): create drafts / payment requests, fetch transaction templates, rates, and fee schedule. Signing and broadcast stay in the user’s wallet.
+14 tools (see live `tools/list`): create_draft, get_draft, get_draft_status, list_draft_quotes, get_transaction_template, submit_lightning_proof, create_payment_request, get_payment_request, list_address_book, propose_receiving_address, get_account_status, create_account, get_rate, get_fee_schedule. Signing and broadcast stay in the user’s wallet.
+
+**Agents onboard themselves; humans approve where the money lands.** An agent proposes a receiving address (`propose_receiving_address`) and the owner approves it after signing in, with a passkey or an authenticator code; no API key can approve an address, and any other address is refused (`422 address_not_approved`). An agent without a key can sign its owner up (`create_account`), but it cannot create anything until the owner takes the account over from an emailed link (`403 owner_not_confirmed` until then). Details: https://send21.io/docs/mcp
 
 ## Brand
 
 send21: crypto pay links and API for people and AI agents.  
-Contact: integration@send21.io
+Contact: info@send21.io
 
 ## License
 
