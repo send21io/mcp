@@ -5,7 +5,7 @@
   "transport": "streamable-http",
   "authentication": {
     "type": "bearer",
-    "description": "Authorization: Bearer s21_<api key>. Scoped API keys at https://send21.io/api-keys. tools/list works unauthenticated."
+    "description": "API key or OAuth sign-in. API key: Authorization: Bearer s21_<api key>, scoped keys at https://send21.io/api-keys. OAuth sign-in: https://send21.io/mcp/oauth (no headers; sign in and approve in the browser). tools/list works unauthenticated."
   },
   "documentation": "https://send21.io/llms.txt",
   "openapi": "https://send21.io/swagger/v1/swagger.json",

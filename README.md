@@ -6,7 +6,7 @@ Remote [Model Context Protocol](https://modelcontextprotocol.io/) server for **s
 
 send21 prepares payment instructions for BTC, USDC, USDT, and EURC. The payer signs in their own wallet. send21 never holds keys, never signs, and never broadcasts.
 
-**Live endpoint (Streamable HTTP):** https://send21.io/mcp  
+**Live endpoint (Streamable HTTP):** https://send21.io/mcp (API key), https://send21.io/mcp/oauth (OAuth sign-in)  
 **Descriptor:** https://send21.io/.well-known/mcp.json  
 **Agent docs:** https://send21.io/llms.txt  
 **OpenAPI:** https://send21.io/swagger/v1/swagger.json  
@@ -30,7 +30,10 @@ Point an MCP client at the remote server:
 }
 ```
 
-- Create scoped API keys at https://send21.io/api-keys (`s21_…`).
+Auth: API key or OAuth sign-in.
+
+- **API key:** create scoped keys at https://send21.io/api-keys (`s21_…`) and send them as above.
+- **OAuth sign-in:** clients that support MCP sign-in (Claude, Claude Code, Cursor, VS Code, Muse Code) can use `https://send21.io/mcp/oauth` with no headers. You sign in to send21 in the browser and approve the app; connected apps only ever use receiving addresses the owner approved. Details: https://send21.io/docs/mcp ("Sign in instead of a key").
 - Scopes such as `drafts:write`, `drafts:read`, `webhooks:manage` **cannot move funds**.
 - `tools/list` works without authentication.
 
