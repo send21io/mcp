@@ -4,7 +4,7 @@
 
 Remote [Model Context Protocol](https://modelcontextprotocol.io/) server for **send21**: crypto pay links and API for people and AI agents.
 
-send21 prepares payment instructions for BTC, USDC, USDT, and EURC. The payer signs in their own wallet. send21 never holds keys, never signs, and never broadcasts.
+send21 prepares payment instructions for BTC (on-chain and Lightning), USDC, USDT, EURC, SOL and ETH. The payer signs in their own wallet. send21 never holds keys, never signs, and never broadcasts.
 
 **Live endpoint (Streamable HTTP):** https://send21.io/mcp (API key), https://send21.io/mcp/oauth (OAuth sign-in)  
 **Descriptor:** https://send21.io/.well-known/mcp.json  
@@ -33,9 +33,50 @@ Point an MCP client at the remote server:
 Auth: API key or OAuth sign-in.
 
 - **API key:** create scoped keys at https://send21.io/api-keys (`s21_…`) and send them as above.
-- **OAuth sign-in:** clients that support MCP sign-in (Claude, Claude Code, Cursor, VS Code, Muse Code) can use `https://send21.io/mcp/oauth` with no headers. You sign in to send21 in the browser and approve the app; connected apps only ever use receiving addresses the owner approved. Details: https://send21.io/docs/mcp ("Sign in instead of a key").
+- **OAuth sign-in:** use `https://send21.io/mcp/oauth` with no headers; see [Sign in instead of an API key](#sign-in-instead-of-an-api-key) below.
 - Scopes such as `drafts:write`, `drafts:read`, `webhooks:manage` **cannot move funds**.
-- `tools/list` works without authentication.
+- `tools/list` and `get_fee_schedule` work without authentication.
+
+## Sign in instead of an API key
+
+Clients that support MCP sign-in (OAuth) can connect to `https://send21.io/mcp/oauth` with no key and no headers. The client opens send21 in your browser; you sign in, see what the app asks for, and approve. A connected app only ever uses receiving addresses you approved. It is listed under [API keys](https://send21.io/api-keys) as a connected app, where Disconnect ends it at once, and a connection nobody uses for 90 days ends by itself.
+
+**Claude Code**
+
+```bash
+claude mcp add --transport http send21 https://send21.io/mcp/oauth
+# then run /mcp in Claude Code and choose send21 to sign in
+# (or, from your shell: claude mcp login send21)
+```
+
+**Cursor** (`.cursor/mcp.json` in your project, or `~/.cursor/mcp.json` for all projects)
+
+```json
+{
+  "mcpServers": {
+    "send21": {
+      "url": "https://send21.io/mcp/oauth"
+    }
+  }
+}
+```
+
+**VS Code** (`.vscode/mcp.json`)
+
+```json
+{
+  "servers": {
+    "send21": {
+      "type": "http",
+      "url": "https://send21.io/mcp/oauth"
+    }
+  }
+}
+```
+
+**Any MCP client that supports OAuth:** add `https://send21.io/mcp/oauth` as a remote (Streamable HTTP) MCP server with no headers, then sign in when the client asks.
+
+Prefer an API key? It still works: use `https://send21.io/mcp` with `Authorization: Bearer s21_...`, a scoped key created at https://send21.io/api-keys. `tools/list` and `get_fee_schedule` work without either. Details: https://send21.io/docs/mcp
 
 ## What the tools do
 
