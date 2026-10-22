@@ -4,8 +4,22 @@
   "title": "send21",
   "description": "Crypto pay links and API for people and AI agents. BTC, Lightning, USDC, USDT, EURC, SOL, ETH.",
   "websiteUrl": "https://send21.io/docs/mcp",
-  "version": "1.5.0",
+  "version": "1.7.0",
   "icons": [
+    {
+      "src": "https://send21.io/favicon-new.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    },
+    {
+      "src": "https://send21.io/branding/send21-icon-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    },
     {
       "src": "https://send21.io/branding/send21-icon-new.svg",
       "mimeType": "image/svg+xml",
@@ -33,6 +47,10 @@
           "isSecret": true
         }
       ]
+    },
+    {
+      "type": "streamable-http",
+      "url": "https://send21.io/mcp/oauth"
     }
   ]
 }
