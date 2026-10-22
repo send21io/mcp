@@ -2,7 +2,7 @@
 
 # send21 MCP
 
-Remote [Model Context Protocol](https://modelcontextprotocol.io/) server for **send21**: crypto pay links and API for people and AI agents.
+Remote [Model Context Protocol](https://modelcontextprotocol.io/) server for [send21](https://send21.io/): crypto pay links and API for people and AI agents.
 
 send21 prepares payment instructions for BTC (on-chain and Lightning), USDC, USDT, EURC, SOL and ETH. The payer signs in their own wallet. send21 never holds keys, never signs, and never broadcasts.
 

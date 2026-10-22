@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Remote MCP connector metadata for send21: crypto pay links and API for people and AI agents (https://send21.io/mcp)",
   "license": "MIT",
-  "homepage": "https://send21.io",
+  "homepage": "https://send21.io/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/send21io/mcp.git"
