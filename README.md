@@ -3,6 +3,7 @@
 # send21 MCP
 
 [![send21 MCP server](https://mcprush.com/badge/send21-mcp/card.svg)](https://mcprush.com/to/send21-mcp?ref=badge)
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/send21io/mcp)
 
 Remote [Model Context Protocol](https://modelcontextprotocol.io/) server for [send21](https://send21.io/): crypto pay links and API for people and AI agents.
 
