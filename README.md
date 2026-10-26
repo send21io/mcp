@@ -79,7 +79,7 @@ claude mcp add --transport http send21 https://send21.io/mcp/oauth
 
 **Any MCP client that supports OAuth:** add `https://send21.io/mcp/oauth` as a remote (Streamable HTTP) MCP server with no headers, then sign in when the client asks.
 
-Prefer an API key? It still works: use `https://send21.io/mcp` with `Authorization: Bearer s21_...`, a scoped key created at https://send21.io/api-keys. `tools/list` and `get_fee_schedule` work without either. Details: https://send21.io/docs/mcp
+Prefer an API key? It still works: use `https://send21.io/mcp` with `Authorization: Bearer s21_...`, a scoped key you create at https://send21.io/api-keys in your account. `tools/list` and `get_fee_schedule` work without either. Details: https://send21.io/docs/mcp
 
 ## What the tools do
 
